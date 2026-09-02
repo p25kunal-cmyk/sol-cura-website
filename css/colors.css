@@ -796,3 +796,66 @@ h1, h2, h3, h4, h5, h6,
   color: var(--sun-orange) !important;
   gap: 0.65rem;
 }
+
+/* ── BUNDLE CARD (CARD 4) HIGH-CONTRAST VISIBILITY FIX ───── */
+.product-card--bundle {
+  background: linear-gradient(145deg, #0F382C 0%, #164636 100%) !important;
+  border: 2px solid var(--sun-orange) !important;
+  color: #ffffff !important;
+}
+
+.product-card__image-wrap--bundle {
+  background: linear-gradient(135deg, #164636 0%, #0F382C 100%) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-direction: column !important;
+  gap: 0.75rem !important;
+  padding: 2.5rem 1.5rem !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.product-card--bundle .product-card__spf {
+  color: var(--sun-orange-lt) !important;
+  font-weight: 700 !important;
+}
+.product-card--bundle .product-card__name {
+  color: #ffffff !important;
+  font-weight: 800 !important;
+}
+.product-card--bundle .product-card__benefit {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+.product-card--bundle .product-card__stars {
+  color: var(--sun-orange) !important;
+}
+.product-card--bundle .product-card__stars span {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+.product-card--bundle .product-card__footer {
+  border-top-color: rgba(255, 255, 255, 0.12) !important;
+}
+.product-card--bundle .product-card__price {
+  color: #ffffff !important;
+}
+.product-card--bundle .product-card__subscribe {
+  background: rgba(232, 114, 26, 0.2) !important;
+  color: var(--sun-orange-lt) !important;
+  font-weight: 700 !important;
+}
+
+/* ── NO WHITE CAST & DARK SECTION EYEBROW FIX ─────────────── */
+.no-white-cast .section-eyebrow,
+.ingredients .section-eyebrow,
+.sustainability .section-eyebrow,
+.subscribe-save .section-eyebrow {
+  color: var(--sun-orange-lt) !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.1em !important;
+}
+
+.no-white-cast .section-title,
+.sustainability .section-title,
+.subscribe-save .section-title {
+  color: #ffffff !important;
+}
