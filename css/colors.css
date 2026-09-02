@@ -643,3 +643,45 @@ h1, h2, h3, h4, h5, h6,
 .subscribe-plan__price {
   color: rgba(255, 255, 255, 0.8) !important;
 }
+
+/* ── ULTIMATE CLEAN SEAMLESS STUDIO SKY HERO (ZERO HORIZONTAL BANDS) ── */
+.hero {
+  background: linear-gradient(165deg, #A6D7EE 0%, #C8E8F5 45%, #E6F3F9 75%, #F4FAFC 100%) !important;
+  position: relative;
+  padding-top: 4rem;
+  padding-bottom: 6rem;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -150px;
+  right: -150px;
+  width: 650px;
+  height: 650px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 70%);
+  pointer-events: none;
+}
+
+.hero__subheadline {
+  color: rgba(15, 56, 44, 0.85) !important;
+}
+
+.hero__trust-strip {
+  background: rgba(255, 255, 255, 0.75) !important;
+  backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.9) !important;
+  box-shadow: 0 4px 16px rgba(15, 56, 44, 0.04) !important;
+}
+
+.hero__image-wrap img {
+  filter: drop-shadow(0 15px 35px rgba(15, 56, 44, 0.12)) !important;
+}
+
+.hero__badge--stat-strip {
+  background: rgba(255, 255, 255, 0.96) !important;
+  backdrop-filter: blur(16px) !important;
+  border: 1px solid #ffffff !important;
+  box-shadow: 0 16px 45px rgba(15, 56, 44, 0.08) !important;
+}
