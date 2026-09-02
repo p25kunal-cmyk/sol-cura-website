@@ -572,3 +572,16 @@ h1, h2, h3, h4, h5, h6,
     border-bottom: none;
   }
 }
+
+/* ── TRANSPARENT PNG HERO PRODUCTS STYLING ───────────────── */
+.hero__image-wrap {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+.hero__image-wrap img {
+  background: transparent !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  filter: drop-shadow(0 20px 30px rgba(15, 56, 44, 0.15));
+}
