@@ -1,0 +1,279 @@
+/* ============================================
+   SOL CURA — VIBRANT COLOUR OVERRIDES
+   Each section has its own bold colour identity
+   ============================================ */
+
+/* ── ANNOUNCEMENT BAR — Rainbow gradient ── */
+.announcement-bar {
+  background: linear-gradient(90deg,
+    #C0392B 0%, #E8600A 18%, #D4960A 36%,
+    #1A7A4A 54%, #1565C0 72%, #6A1B9A 90%, #C0392B 100%);
+  background-size: 200% 100%;
+  animation: ticker 20s linear infinite, rainbowShift 6s ease infinite;
+}
+
+@keyframes rainbowShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.announcement-bar__item::before { color: #fff; opacity: .7; }
+
+/* ── NAV — crisp white with coloured logo ── */
+.nav { background: rgba(255,255,255,.96); }
+.nav__logo span { color: #E8600A; }
+
+/* ── HERO — warm coral-to-golden gradient ── */
+.hero {
+  background: linear-gradient(135deg, #FFF5EE 0%, #FFF0E5 40%, #FFFBF0 100%);
+}
+.hero__eyebrow { background: #FFF0E5; color: #C05020; }
+.hero__headline em { color: #E8600A; }
+
+/* ── BENEFIT STRIP — deep ocean navy ── */
+.benefit-strip { background: #0F2744; }
+.benefit-item { border-right-color: rgba(255,255,255,.08); }
+.benefit-item__icon { background: rgba(80,160,255,.15); }
+
+/* ── PROBLEM / SOLUTION ── */
+.problem-solution { background: #FFF8F5; }
+
+.problem-card {
+  background: #FFF0ED;
+  border-color: #FFCCC0;
+}
+
+.ps-label--bad { background: #FFE0D8; color: #C0392B; }
+
+.solution-card {
+  background: linear-gradient(145deg, #0C4A6E 0%, #075985 100%);
+}
+.ps-label--good { background: rgba(255,255,255,.15); color: #7DD3FC; }
+.solution-card .ps-headline { color: #fff; }
+.solution-card .ps-list li { color: rgba(255,255,255,.9); }
+.ps-list--good li .icon { background: rgba(125,211,252,.18); color: #7DD3FC; }
+
+/* ── PRODUCTS GRID — soft violet ── */
+.products { background: linear-gradient(160deg, #F5F0FF 0%, #EDE8FF 100%); }
+
+.product-card { border-color: #E0D8FF; }
+.product-card:hover { box-shadow: 0 12px 40px rgba(109,40,217,.18); }
+.product-card__spf { color: #7C3AED; }
+
+/* Colorful top borders on cards */
+.product-card:nth-child(1) { border-top: 4px solid #F97316; }
+.product-card:nth-child(2) { border-top: 4px solid #8B5CF6; }
+.product-card:nth-child(3) { border-top: 4px solid #06B6D4; }
+.product-card:nth-child(4) { border-top: 4px solid #EC4899; }
+
+/* ── NO WHITE CAST — deep indigo ── */
+.no-white-cast {
+  background: linear-gradient(145deg, #1E0E4A 0%, #2D1565 60%, #1E0E4A 100%);
+}
+.no-white-cast::before {
+  background: radial-gradient(circle, rgba(139,92,246,.15) 0%, transparent 70%);
+}
+.no-white-cast__content .section-title { color: #fff; }
+.no-white-cast__content .section-sub { color: rgba(255,255,255,.7); }
+.no-white-cast__content .section-eyebrow { color: rgba(196,181,253,.7); }
+.skin-tone { border-color: rgba(196,181,253,.3); }
+.skin-tone:hover, .skin-tone.active { border-color: #A78BFA; }
+.before-after__handle { background: #A78BFA; }
+.before-after__handle-circle { background: #fff; color: #4C1D95; }
+
+/* ── UNDER MAKEUP — warm coral-peach ── */
+.under-makeup { background: linear-gradient(160deg, #FFF5EE 0%, #FFF0E8 100%); }
+
+.routine-step__number { background: #FFE8D6; color: #C05020; }
+.routine-step.active { border-color: #F97316; background: #FFF0E5; }
+.routine-step.active .routine-step__number { background: #F97316; color: #fff; }
+.routine-step:hover { border-color: #F97316; background: #FFF5EE; }
+
+/* ── INGREDIENTS — fresh sage green ── */
+.ingredients { background: linear-gradient(160deg, #F0FAF5 0%, #E8F5EE 100%); }
+
+.ingredient-card { border-color: #C6E8D4; }
+.ingredient-card:hover { border-color: #4ADE80; box-shadow: 0 8px 30px rgba(22,163,74,.15); }
+.ingredient-card__icon { background: #D1FAE5; }
+.ingredient-card__name { color: #14532D; }
+.ingredient-card--clean { background: #ECFDF5; border-color: #6EE7B7; }
+.ingredient-card--clean .ingredient-card__icon { background: #D1FAE5; }
+
+/* ── COMPARISON TABLE — sky blue ── */
+.comparison { background: linear-gradient(160deg, #EFF6FF 0%, #DBEAFE 100%); }
+.comparison-table thead tr { background: #1D4ED8; }
+.comparison-table thead th:nth-child(2) { color: #BAE6FD; }
+.comparison-table tbody tr:hover { background: #EFF6FF; }
+.ct-check { color: #16A34A; }
+.ct-good { color: #15803D; }
+
+/* ── SPF QUIZ — vibrant coral orange ── */
+.spf-quiz {
+  background: linear-gradient(145deg, #FFF7ED 0%, #FFEDD5 100%);
+}
+.quiz-progress__dot.active { background: #F97316; }
+.quiz-progress__dot.done { background: #16A34A; }
+.quiz-option.selected { border-color: #F97316; background: #F97316; }
+.quiz-option:hover { border-color: #F97316; }
+.quiz-result__badge { background: #FFEDD5; color: #C2410C; }
+
+/* ── REVIEWS — soft periwinkle ── */
+.reviews { background: linear-gradient(160deg, #EEF2FF 0%, #E0E7FF 100%); }
+.rating-summary { background: #fff; }
+.filter-tag { border-color: #C7D2FE; background: #fff; }
+.filter-tag:hover, .filter-tag.active { background: #4F46E5; border-color: #4F46E5; }
+.review-card { border-color: #C7D2FE; }
+.review-card:hover { box-shadow: 0 8px 30px rgba(79,70,229,.15); }
+.review-card__quote::before { color: #818CF8; }
+.review-card__stars { color: #F59E0B; }
+.rating-big__stars { color: #F59E0B; }
+.rating-bar-fill { background: linear-gradient(90deg, #4F46E5, #818CF8); }
+
+/* ── SUSTAINABILITY — vibrant emerald ── */
+.sustainability__content {
+  background: linear-gradient(145deg, #064E3B 0%, #065F46 60%, #047857 100%);
+}
+.sustain-point__icon { background: rgba(255,255,255,.12); }
+
+/* ── SUBSCRIBE & SAVE — deep royal navy ── */
+.subscribe-save {
+  background: linear-gradient(145deg, #0F172A 0%, #1E3A5F 60%, #0F172A 100%);
+}
+.subscribe-save .section-eyebrow { color: rgba(147,197,253,.7); }
+.subscribe-save .section-title { color: #fff; }
+.subscribe-save .section-sub { color: rgba(255,255,255,.7); }
+.subscribe-benefit { color: rgba(255,255,255,.9); }
+.subscribe-benefit::before { background: #3B82F6; }
+
+.subscribe-save__card { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1); border-radius: 32px; }
+.subscribe-plan { border-color: rgba(255,255,255,.12); }
+.subscribe-plan:hover, .subscribe-plan.active { border-color: #60A5FA; background: rgba(255,255,255,.06); }
+.subscribe-plan__name { color: #fff; }
+.subscribe-plan__price { color: rgba(255,255,255,.55); }
+.subscribe-plan__badge { background: rgba(96,165,250,.2); color: #93C5FD; }
+.subscribe-plan.active .subscribe-plan__radio { border-color: #60A5FA; background: #3B82F6; }
+
+/* ── JOURNAL — warm golden amber ── */
+.journal { background: linear-gradient(160deg, #FFFBEB 0%, #FEF3C7 100%); }
+.journal-card__title { color: #78350F; }
+.journal-card__category { color: #B45309; }
+.journal-card__read-more { color: #92400E; }
+
+/* Journal card image placeholders — each different colour */
+.journal-card:nth-child(1) .journal-card__image { background: linear-gradient(135deg, #FED7AA, #FDBA74); }
+.journal-card:nth-child(2) .journal-card__image { background: linear-gradient(135deg, #D9F99D, #86EFAC); }
+.journal-card:nth-child(3) .journal-card__image { background: linear-gradient(135deg, #FDE68A, #FCA5A5); }
+.journal-card:nth-child(4) .journal-card__image { background: linear-gradient(135deg, #BAE6FD, #93C5FD); }
+.journal-card:nth-child(5) .journal-card__image { background: linear-gradient(135deg, #C4B5FD, #A78BFA); }
+.journal-card:nth-child(6) .journal-card__image { background: linear-gradient(135deg, #FCA5A5, #F9A8D4); }
+
+/* ── FAQ — soft lavender ── */
+.faq { background: linear-gradient(160deg, #FAF5FF 0%, #F3E8FF 100%); }
+.faq-question:hover { color: #7C3AED; }
+.faq-item.open .faq-icon { background: #7C3AED; border-color: #7C3AED; }
+.faq-item { border-bottom-color: #DDD6FE; }
+.faq-item:first-child { border-top-color: #DDD6FE; }
+
+/* ── FOOTER — deep midnight navy ── */
+.footer {
+  background: linear-gradient(180deg, #020817 0%, #0A1628 40%, #0F2040 100%);
+}
+.social-btn:hover { background: #3B82F6; color: #fff; }
+.footer__email-form button { background: #3B82F6; }
+.footer__email-form button:hover { background: #2563EB; }
+
+/* ── STICKY ATC ── */
+.sticky-atc { background: rgba(255,255,255,.97); border-top-color: #E0D8FF; }
+
+/* ── SECTION TITLES — coloured per section ── */
+.products .section-title { color: #4C1D95; }
+.products .section-eyebrow { color: #7C3AED; }
+.products .section-sub { color: #5B4E88; }
+
+.under-makeup .section-title { color: #7C2D12; }
+.under-makeup .section-eyebrow { color: #C05020; }
+
+.ingredients .section-title { color: #14532D; }
+.ingredients .section-eyebrow { color: #16A34A; }
+
+.comparison .section-title { color: #1E3A8A; }
+.comparison .section-eyebrow { color: #2563EB; }
+
+.spf-quiz .section-title { color: #7C2D12; }
+.spf-quiz .section-eyebrow { color: #C2410C; }
+
+.reviews .section-title { color: #1E1B4B; }
+.reviews .section-eyebrow { color: #4F46E5; }
+
+.journal .section-title { color: #78350F; }
+.journal .section-eyebrow { color: #B45309; }
+
+.faq .section-title { color: #3B0764; }
+.faq .section-eyebrow { color: #7C3AED; }
+
+/* ── ACTIVE LIFESTYLE overlay colour tweak ── */
+.active-lifestyle__bg::after {
+  background: linear-gradient(135deg, rgba(15,47,100,.82) 0%, rgba(6,78,59,.5) 60%, transparent 100%);
+}
+.activity-tag { border-color: rgba(255,255,255,.25); background: rgba(255,255,255,.12); }
+
+/* ── HERO TRUST STRIP ── */
+.hero__trust-item::before { background: #D1FAE5; color: #16A34A; }
+
+/* ── GRADIENT HERO HEADLINE ACCENT ── */
+.hero__headline { 
+  background: none; 
+}
+
+/* ── BUTTON COLOUR UPDATES FOR COLOURED SECTIONS ── */
+.products .btn--primary,
+.comparison .btn--primary { background: #4F46E5; border-color: #4F46E5; }
+.products .btn--primary:hover,
+.comparison .btn--primary:hover { background: #4338CA; border-color: #4338CA; box-shadow: 0 8px 24px rgba(79,70,229,.3); }
+
+.ingredients .btn--outline { border-color: #16A34A; color: #16A34A; }
+.ingredients .btn--outline:hover { background: #16A34A; color: #fff; }
+
+.faq .section-header + * { color: #3B0764; }
+
+/* ── COLOURFUL SECTION DIVIDERS ── */
+.benefit-strip { border-top: 3px solid; border-image: linear-gradient(90deg, #F97316, #EC4899, #8B5CF6, #3B82F6, #10B981) 1; }
+
+/* ── INGREDIENT CARD DISTINCT COLOURS ── */
+.ingredient-card:nth-child(1) .ingredient-card__icon { background: #DBEAFE; }
+.ingredient-card:nth-child(2) .ingredient-card__icon { background: #E0E7FF; }
+.ingredient-card:nth-child(3) .ingredient-card__icon { background: #FCE7F3; }
+.ingredient-card:nth-child(4) .ingredient-card__icon { background: #D1FAE5; }
+.ingredient-card:nth-child(5) .ingredient-card__icon { background: #FEF3C7; }
+
+/* ── PRODUCT SECTION HEADING GRADIENT ── */
+.products .section-title {
+  background: linear-gradient(135deg, #7C3AED, #EC4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── REVIEW STARS PER CARD ── */
+.review-card:nth-child(1) { border-top: 3px solid #F97316; }
+.review-card:nth-child(2) { border-top: 3px solid #8B5CF6; }
+.review-card:nth-child(3) { border-top: 3px solid #06B6D4; }
+.review-card:nth-child(4) { border-top: 3px solid #EC4899; }
+.review-card:nth-child(5) { border-top: 3px solid #10B981; }
+.review-card:nth-child(6) { border-top: 3px solid #F59E0B; }
+
+/* ── PROBLEM/SOLUTION SECTION BG ── */
+.problem-solution { background: linear-gradient(160deg, #FFF8F5 0%, #FFF5FF 100%); }
+
+/* ── MOBILE NAV ── */
+.mobile-nav__panel { background: #fff; }
+.mobile-nav__links a:hover { color: #F97316; }
+
+/* ── SCROLLBAR (webkit) ── */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #F1F1F1; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #F97316, #8B5CF6); border-radius: 4px; }
+
+/* ── SELECTION HIGHLIGHT ── */
+::selection { background: #F97316; color: #fff; }
