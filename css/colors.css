@@ -434,3 +434,161 @@ small, .no-white-cast p[style] { color: rgba(255,255,255,.45) !important; }
 
 /* ── SECTION DIVIDER ACCENT ───────────────────────────────── */
 .benefit-strip { border-top: none; border-bottom: 3px solid var(--brand-orange); }
+
+
+/* ============================================================
+   FIXES — v2
+   1. Stop announcement bar scrolling (make it static)
+   2. Fix green colour bleeding out of sections
+   3. Make sticky ATC bar mobile-friendly
+   ============================================================ */
+
+/* ── FIX 1: Stop announcement bar scrolling ─────────────────
+   Kill the ticker animation entirely. Show static centered text. */
+.announcement-bar {
+  overflow: hidden;
+}
+.announcement-bar__track {
+  animation: none !important;
+  transform: none !important;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0;
+  white-space: normal;
+  width: 100%;
+}
+/* Show only first 4 items (the rest were duplicates for the loop) */
+.announcement-bar__item:nth-child(n+5) {
+  display: none;
+}
+.announcement-bar__item {
+  padding: 0 1.25rem;
+  border-right: 1px solid rgba(255,255,255,.2);
+}
+.announcement-bar__item:last-of-type:not(:nth-child(n+5)) {
+  border-right: none;
+}
+
+/* ── FIX 2: Stop green bleeding out ─────────────────────────
+   Sections with dark green backgrounds need overflow: hidden
+   so the colour can't bleed past the section boundaries.
+   Also ensure body stays off-white between sections. */
+body {
+  background: var(--brand-off-white) !important;
+}
+
+/* Contain all sections that use the dark green */
+.benefit-strip,
+.no-white-cast,
+.subscribe-save,
+.footer {
+  overflow: hidden;
+  position: relative;
+}
+
+/* Hard clip on sections so nothing escapes the bottom/top edges */
+section, .benefit-strip, header, footer {
+  overflow-x: hidden;
+}
+
+/* Nav: force white background always — no green bleed from scrolled state */
+.nav,
+.nav.scrolled {
+  background: #ffffff !important;
+  border-bottom: 2px solid var(--brand-blue) !important;
+  box-shadow: 0 2px 12px rgba(42,111,138,.12) !important;
+}
+
+/* Announcement bar: stay inside its own container */
+.announcement-bar {
+  position: relative;
+  z-index: 201;
+  overflow: hidden;
+}
+
+/* ── FIX 3: Mobile-friendly Sticky ATC ──────────────────────
+   Make the sticky ATC fully responsive on all screen sizes. */
+
+/* Tablet and below */
+@media (max-width: 900px) {
+  .sticky-atc {
+    padding: .625rem 1rem;
+    gap: .625rem;
+  }
+  .sticky-atc__product {
+    max-width: 220px;
+  }
+  .sticky-atc__name {
+    font-size: .78rem;
+    line-height: 1.3;
+  }
+  .sticky-atc__price {
+    font-size: .72rem;
+  }
+}
+
+/* Mobile — complete rework */
+@media (max-width: 640px) {
+  .sticky-atc {
+    flex-direction: column;
+    align-items: stretch;
+    padding: .75rem 1rem .85rem;
+    gap: .5rem;
+    /* Taller touch target */
+  }
+
+  /* Show product info on mobile but compact it */
+  .sticky-atc__product {
+    display: flex !important;  /* override the hide from original CSS */
+    max-width: 100%;
+    width: 100%;
+    gap: .625rem;
+  }
+
+  .sticky-atc__img {
+    width: 36px;
+    height: 36px;
+    border-radius: 6px;
+    flex-shrink: 0;
+  }
+
+  .sticky-atc__name {
+    font-size: .75rem;
+    font-weight: 600;
+    line-height: 1.3;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .sticky-atc__price {
+    font-size: .68rem;
+    margin-top: .1rem;
+  }
+
+  /* Full-width buttons row */
+  .sticky-atc__actions {
+    display: flex;
+    width: 100% !important;
+    gap: .5rem;
+  }
+
+  .sticky-atc__actions .btn {
+    flex: 1;
+    justify-content: center;
+    text-align: center;
+    font-size: .78rem;
+    padding: .55rem .5rem;
+    min-height: 40px; /* accessible touch target */
+  }
+
+  /* Hide the "See All SPF" secondary button on very small screens */
+  @media (max-width: 400px) {
+    .sticky-atc__actions .btn--outline {
+      display: none;
+    }
+    .sticky-atc__actions .btn--primary {
+      width: 100%;
+    }
+  }
+}
